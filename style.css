@@ -41,6 +41,9 @@ header p, h1 {
 .header-left {
 	padding: 36px 40px 0 61px;
 }
+.header-right img {
+	width: 100%;
+}
 #main {
 	display: grid;
 	grid-template-columns: 270px auto;
@@ -95,6 +98,7 @@ header p, h1 {
 .card-btn {
 	border: 1px solid black;
 	padding: 2px 13px;
+	border-radius: 5px;
 }
 .card-text {
 	padding: 14px 9px;
@@ -138,3 +142,64 @@ footer hr {
 	color: #888686;
 	font-size: 25px;
 }
+/* media query */
+
+/* mobile view */
+@media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 31px;
+        line-height: 40px;
+    }
+    .header-left {
+        padding: 33px 6px 0 43px;
+    }
+    header {
+        grid-template-columns: 1fr;
+        gap:35px;
+        margin-bottom: 22px;
+    }
+    .btn {
+        margin: 110px;
+    }
+    .pragraph {
+        padding: 0px 14px 0 0;
+    }
+    #main {
+	grid-template-columns:auto;
+	grid-template-rows: 215px repeat(6, 403px);
+}
+    .aside {
+        background-color: white;
+    }
+    .aside-btn {
+        border: 1px solid #aba1a1;
+    }
+    .btn_pad_two {
+        padding: 8px 28px;
+    }
+    .btn_pad_three {
+        padding: 8px 49px;
+    }
+    .main-right {
+        grid-template-columns: auto;
+        gap: 17px;
+        grid-template-rows: repeat(6, 396px);
+    }
+    .footer-bar {
+        gap: 15px;
+        flex-direction: column;
+    }
+    .social-icon {
+        margin-right: 41px;
+    }
+  }
+  /* tablet view*/
+  @media screen and (min-width: 577px) and (max-width: 992px) {
+    header h1 {
+        font-size: 31px;
+        line-height: 40px;
+    }
+    .header-left {
+        padding: 33px 6px 0 43px;
+    }
+  }
