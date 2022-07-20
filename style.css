@@ -17,11 +17,10 @@ body {
 	background-color: red;
 	padding: 6px 12px;
 	border-radius: 4px;
+	width: 93px;
+	margin: 0 auto;
 }
 /* utilitis/common code end */
-fa-angle-right{
-    color: white;
-}
 header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -50,6 +49,31 @@ header p, h1 {
 	gap: 16px;
 	grid-template-rows: 209px 455px;
 }
+/* upcomming match */
+#upcomming {
+	display: grid;
+	grid-template-columns: 270px auto;
+	gap: 16px;
+	grid-template-rows: 209px 170px;
+}
+.upcomming-right {
+	 display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 13px;
+	grid-template-rows: repeat(2, 200px);
+}
+.flag {
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px 0;
+	gap: 0px 8px;
+}
+.card-gap {
+	padding: 11px 0px;
+	row-gap: 9px;
+	align-items: center;
+}
+/* upcomming end */
 .aside-btn {
 	text-decoration: none;
 	color: black;
@@ -113,6 +137,13 @@ header p, h1 {
 .icon-gap{
     margin-right: 5px;
 }
+.view-btn {
+	display: flex;
+	margin: 32px 0 0 0;
+}
+.display-btn {
+visibility: hidden;
+}
 footer {
 	background-color: black;
 	display: flex;
@@ -122,9 +153,10 @@ footer {
 	margin-top: 37px;
 }
 .footer-bar {
-	display: flex;
-	gap: 26px;
-	padding: 21px 0;
+	display: grid;
+	padding: 27px 0;
+	grid-template-columns: repeat(6,auto);
+	gap: 35px;
 }
 .footer-bar a {
 	color: white;
@@ -167,7 +199,11 @@ footer hr {
     #main {
 	grid-template-columns:auto;
 	grid-template-rows: 215px repeat(6, 403px);
-}
+    }
+	#upcomming {
+		grid-template-columns: auto;
+		grid-template-rows: 215px repeat(6, 202px);
+	}
     .aside {
         background-color: white;
     }
@@ -181,19 +217,29 @@ footer hr {
         padding: 8px 49px;
     }
     .main-right {
-        grid-template-columns: auto;
-        gap: 17px;
-        grid-template-rows: repeat(6, 396px);
-    }
+		grid-template-columns: auto;
+		gap: 17px;
+		grid-template-rows: repeat(6, 412px);
+	}
+    .upcomming-right {
+		grid-template-columns: auto;
+		gap: 17px;
+		grid-template-rows: repeat(6, 215px);
+	}
+	.view-btn {
+		margin: -147px 0 0 0;
+	}
     .footer-bar {
-        gap: 15px;
-        flex-direction: column;
-    }
+		gap: 15px;
+		grid-template-columns: auto;
+	}
     .social-icon {
         margin-right: 41px;
     }
   }
-  /* tablet view*/
+  /* mobile view end */
+
+  /* tablet view start*/
   @media screen and (min-width: 577px) and (max-width: 992px) {
     header h1 {
         font-size: 31px;
@@ -202,4 +248,47 @@ footer hr {
     .header-left {
         padding: 33px 6px 0 43px;
     }
+	header {
+		margin: 20px 0 65px 0;
+	}
+	#main {
+		grid-template-columns: auto;
+		grid-template-rows: 40px auto;
+		gap:30px;
+	}
+	#upcomming {
+		grid-template-columns: auto;
+		grid-template-rows: 40px auto;
+		gap:30px;
+	}
+	.upcomming-right {
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,208px);
+	}
+	.aside {
+		flex-direction: row;
+		gap: 8px;
+		background-color: white;
+		padding: 0px;
+		justify-content: center;
+	}
+	.aside-btn {
+		border: 1px solid #cabcbc;
+	}
+	.btn_pad_one {
+		padding: 8px 33px;
+	}
+	.btn_pad_two {
+		padding: 8px 40px;
+	}
+	.btn_pad_three {
+		padding: 8px 48px;
+	}
+	.display-btn {
+		visibility:visible;
+	}
+	.footer-bar {
+		grid-template-columns: repeat(4,auto);
+		gap: 28px;
+	}
   }
