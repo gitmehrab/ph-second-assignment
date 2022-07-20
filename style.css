@@ -74,6 +74,25 @@ header p, h1 {
 	align-items: center;
 }
 /* upcomming end */
+/* all group start */
+.country {
+	display: flex;
+	align-items: center;
+}
+.group-name {
+	background-color: #b5a3a3;
+	padding: 0px 65px;
+}
+.country img {
+	width: 38px;
+	height: 25px;
+}
+.country-name {
+	background-color: #352d2f;
+	color: white;
+	padding: 2px 68px;
+}
+/* all group end */
 .aside-btn {
 	text-decoration: none;
 	color: black;
@@ -264,6 +283,10 @@ footer hr {
 	.upcomming-right {
 		grid-template-columns: repeat(2,1fr);
 		grid-template-rows: repeat(3,208px);
+	}
+	.main-right {
+		grid-template-columns: repeat(2,1fr);
+		grid-template-rows: repeat(3,395px);
 	}
 	.aside {
 		flex-direction: row;
