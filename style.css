@@ -20,6 +20,9 @@ body {
 	width: 93px;
 	margin: 0 auto;
 }
+.btn:hover{
+	background-color: #6d658a;
+}
 /* utilitis/common code end */
 header {
 	display: grid;
@@ -43,6 +46,31 @@ header p, h1 {
 .header-right img {
 	width: 100%;
 }
+.animate img {
+	width: 17%;
+}
+.animate {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(44, 33, 33);
+	animation-name: headerAnimate;
+	animation-duration: 7s;
+	border-radius: 30px;
+	animation-iteration-count: infinite;
+	position: relative;
+	margin: 35px 0;
+}
+@keyframes headerAnimate {
+	0%   {background-color: rgb(148, 137, 137); left:0px;}
+	25%  {background-color: rgb(136, 136, 65);}
+	50%  {background-color: rgb(100, 100, 156); left:100px;}
+	100% {background-color: rgb(98, 127, 98); left:0px;}
+  }
+.text-animate {
+	font-size: 22px;
+}
 #main {
 	display: grid;
 	grid-template-columns: 270px auto;
@@ -57,10 +85,10 @@ header p, h1 {
 	grid-template-rows: 209px 170px;
 }
 .upcomming-right {
-	 display: grid;
+	display: grid;
 	grid-template-columns: repeat(3,1fr);
 	gap: 13px;
-	grid-template-rows: repeat(2, 200px);
+	grid-template-rows: repeat(2, 216px);
 }
 .flag {
 	display: flex;
@@ -69,7 +97,7 @@ header p, h1 {
 	gap: 0px 8px;
 }
 .card-gap {
-	padding: 11px 0px;
+	padding: 11px 7px;
 	row-gap: 9px;
 	align-items: center;
 }
@@ -108,9 +136,15 @@ header p, h1 {
 }
 .btn_pad_three {
 	padding: 8px 86px;
-	background-color: red;
-	color: white;
 }
+ .aside a:focus-within {
+	background-color: rgb(175, 48, 48);
+	color:white;
+  } 
+.aside a:hover {
+	background-color: rgb(133, 133, 196);
+	color:white;
+  } 
 .aside {
 	display: flex;
 	flex-direction: column;
@@ -118,6 +152,8 @@ header p, h1 {
 	background-color: black;
 	padding: 30px;
 	border-radius: 9px;
+	position: sticky;
+	top: 0;
 }
 .main-right {
 	display: grid;
@@ -130,6 +166,7 @@ header p, h1 {
 	flex-direction: column;
 	border: 1px solid #978f8f;
 	border-radius: 9px;
+	box-shadow: 1px 4px 5px 1px #827b7b;
 }
 .card img {
 	width: 100%;
@@ -190,7 +227,7 @@ footer hr {
 	gap: 8px;
 }
 .self-socail {
-	color: #888686;
+	color: #6d658a;
 	font-size: 25px;
 }
 /* media query */
@@ -209,6 +246,12 @@ footer hr {
         gap:35px;
         margin-bottom: 22px;
     }
+	.animate{
+		width: 64%;
+	}
+	.text-animate {
+		font-size: 17px;
+	}
     .btn {
         margin: 110px;
     }
@@ -269,6 +312,9 @@ footer hr {
     }
 	header {
 		margin: 20px 0 65px 0;
+	}
+	.text-animate {
+		font-size: 15px;
 	}
 	#main {
 		grid-template-columns: auto;
